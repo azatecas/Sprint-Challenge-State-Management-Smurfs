@@ -11,10 +11,16 @@ import { fetchSmurfs, postSmurfs } from '../actions';
 
 function App({ fetchSmurfs, postSmurfs, smurfs, isFetching, isPosting, errors }) {
 
-useEffect(()=>{
-  //destructured coming from props not import
-  fetchSmurfs();
+useEffect(()=>{ 
+  
+    fetchSmurfs()
+  
 }, [])
+
+  // const onSubmitBtn = e => {
+  //   e.preventDefault();
+  //   fetchSmurfs();
+  // }
 
   console.log('smurfs in app', smurfs);
 
@@ -24,6 +30,7 @@ useEffect(()=>{
       <SmurfForm 
         postSmurfs={postSmurfs}
       />
+      {/* <button onClick={onSubmitBtn}>getStuff</button> */}
       <SmurfList 
         smurfs={smurfs}
         isFetching={isFetching}
@@ -33,7 +40,7 @@ useEffect(()=>{
   )
 }
 const mapStateToProps = state => {
-  console.log('this is state in app', state);
+  // console.log('this is state in app', state);
   return {
     smurfs: state.smurfs,
     isFetching: state.isFetching,

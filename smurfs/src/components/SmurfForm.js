@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // import { postSmurfs } from '../actions';
 
 
-export const SmurfForm = ({ postSmurfs, age, name, height }) => {
+export const SmurfForm = ({ postSmurfs }) => {
     const [smurf, setSmurf ] = useState({
         name:'',
         age:0,
@@ -25,14 +25,14 @@ export const SmurfForm = ({ postSmurfs, age, name, height }) => {
 
     return (
         <div>
-            <form id="smurfForm">
+            <form >
             <label htmlFor="name">Name</label>
             <input 
                 type="text"
                 name="name"
                 label="name"
                 placeholder="Smurfett"
-                value={name}
+                value={smurf.name}
                 onChange={inputHandler}
                 className="input"
             />
@@ -42,7 +42,7 @@ export const SmurfForm = ({ postSmurfs, age, name, height }) => {
                 name="age"
                 label="age"
                 placeholder="1"
-                value={age}
+                value={smurf.age}
                 onChange={inputHandler}
                 className="input"
             />
@@ -52,7 +52,7 @@ export const SmurfForm = ({ postSmurfs, age, name, height }) => {
                 name="height"
                 label="height"
                 placeholder="9cm"
-                value={height}
+                value={smurf.height}
                 onChange={inputHandler}
                 className="input"
             />

@@ -20,39 +20,42 @@ export const smurfsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: true
-            }
+            };
         case FETCH_SUCCESS:
             return {
                 ...state,
                 smurfs: action.payload,
                 isFetching: false
-            }
+            };
         case FETCH_FAIL:
             return {
                 ...state,
                 isFetching: false,
                 errors: action.payload
-            }
+            };
         case POST_DATA:
             return {                
                 ...state,
-                isPosting: true,
-                smurfs: [...state.smurfs]
-            }
+                // isPosting: true,                
+            };
         case POST_SUCCESS:
+            console.log('action', action);
+            console.log('action Payload', action.payload);
             return {
                 ...state,
                 smurfs: action.payload,
-                isPosting: false,                
-            }
+                // isPosting: false,                
+            };
         case POST_FAIL :
             return {
                 ...state,
-                isPosting: false,
+                // isPosting: false,
                 errors: action.payload
-            }      
+            };      
         default:
-            return state;
+            return state
+                
+            
     }
 
 }
