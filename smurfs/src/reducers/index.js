@@ -39,8 +39,8 @@ export const smurfsReducer = (state = initialState, action) => {
                 // isPosting: true,                
             };
         case POST_SUCCESS:
-            console.log('action', action);
-            console.log('action Payload', action.payload);
+            // console.log('action', action);
+            // console.log('action Payload', action.payload);
             return {
                 ...state,
                 smurfs: action.payload,

@@ -16,11 +16,9 @@ export const SmurfForm = ({ postSmurfs }) => {
             ...smurf, [e.target.name]: e.target.value
         })
     }
-
     const submitHandler = e => {
         e.preventDefault();
-        postSmurfs(smurf);
-        
+        postSmurfs(smurf);        
     }
 
     return (

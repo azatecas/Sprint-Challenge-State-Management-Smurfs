@@ -3,7 +3,6 @@ import "./App.css";
 
 import { SmurfForm } from './SmurfForm';
 import { SmurfList } from './SmurfList';
-
 import { connect } from 'react-redux';
 import { fetchSmurfs, postSmurfs } from '../actions';
 
@@ -11,11 +10,9 @@ import { fetchSmurfs, postSmurfs } from '../actions';
 
 function App({ fetchSmurfs, postSmurfs, smurfs, isFetching, isPosting, errors }) {
 
-useEffect(()=>{ 
-  
-    fetchSmurfs()
-  
-}, [])
+useEffect(()=>{   
+    fetchSmurfs()  
+  }, [])
 
   // const onSubmitBtn = e => {
   //   e.preventDefault();
