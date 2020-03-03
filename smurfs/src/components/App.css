@@ -21,6 +21,22 @@
 .App-intro {
   font-size: large;
 }
+.smurf-container {
+  display: flex;
+  max-width: 900px;
+  flex-wrap: wrap;  
+}
+
+
+.smurf-card {
+  border: 1px solid blue;
+  background-color: lightblue;
+  color: grey;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
